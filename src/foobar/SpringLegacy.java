@@ -41,14 +41,16 @@ public class SpringLegacy {
         DummyObject other = new DummyObject();
         SpringApplication app = new SpringApplication(SpringLegacy.class);
         ApplicationListener<ApplicationContextEvent> lis = new ApplicationListener() {
+            boolean first = true;
             @Override
             public void onApplicationEvent(ApplicationEvent event) {
-                if (event instanceof ContextRefreshedEvent) {
+                if (first & event instanceof ContextRefreshedEvent) {
                     ApplicationContext c3 = ((ContextRefreshedEvent) event).getApplicationContext();
                     GenericApplicationContext c4 = (GenericApplicationContext) c3;
                     c4.getBeanFactory().registerSingleton("myBean", obj);
                     c4.getBeanFactory().registerSingleton("otherBean", other);
                     System.out.println(c3);
+                    first = false;
                 }
             }
         };
