@@ -14,12 +14,12 @@ import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
     
-@RestController
-@SpringBootApplication
 /**
  * example of injecting a non-spring object into a spring application, eg to support a legacy application
  * https://stackoverflow.com/questions/47911145/injecting-singletons-in-to-a-spring-boot-application-context
  */
+@RestController
+@SpringBootApplication
 public class SpringLegacy {
     public SpringLegacy() {}
 
