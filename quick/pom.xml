@@ -1,0 +1,24 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.db4j</groupId>
+    <artifactId>demo-spring-legacy</artifactId>
+    <name>spring-legacy</name>
+    <version>0.1-SNAPSHOT</version>
+
+    <properties>
+        <spring.boot.version>1.4.1.RELEASE</spring.boot.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+	<sourceDirectory>src</sourceDirectory>
+    </build>
+</project>
